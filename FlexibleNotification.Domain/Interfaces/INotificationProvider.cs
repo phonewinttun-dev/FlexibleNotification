@@ -8,5 +8,7 @@ namespace FlexibleNotification.Domain.Interfaces
     {
         NotificationType Type { get; }
         Task<Result> SendAsync(NotificationMessage message);
+        //Task<Result> SendEmailNotificationAsync(NotificationMessage message);
+
     }
 }

@@ -6,5 +6,6 @@ namespace FlexibleNotification.Domain.Interfaces
     public interface INotificationService
     {
         Task<Result> SendNotificationAsync(NotificationMessage message);
+
     }
 }

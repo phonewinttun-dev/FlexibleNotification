@@ -21,5 +21,13 @@ namespace FlexibleNotification.API.Controllers
             var result = await _notificationService.SendNotificationAsync(message);
             return result.IsSuccess ? Ok(result) : BadRequest(result);
         }
+        
+        //[HttpPost("send-email")]
+        //public async Task<IActionResult> SendEmailNotification([FromBody] NotificationMessage message)
+        //{
+        //    var result = await _notificationService.SendEmailNotificationAsync(message);
+        //    return result.IsSuccess ? Ok(result) : BadRequest(result);
+        //}
+
     }
 }
