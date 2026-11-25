@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="FlexibleNotification.API/FlexibleNotification.API.csproj" />
+  <Project Path="FlexibleNotification.Domain/FlexibleNotification.Domain.csproj" />
+</Solution>
