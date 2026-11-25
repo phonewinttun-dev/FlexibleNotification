@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using FlexibleNotification.Domain.Models;
+using FlexibleNotification.Shared;
 
 namespace FlexibleNotification.Domain.Interfaces
 {
-    public class INotificationService
+    public interface INotificationService
     {
+        Task<Result> SendNotificationAsync(NotificationMessage message);
     }
 }
