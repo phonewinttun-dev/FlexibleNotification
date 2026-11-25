@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using FlexibleNotification.Domain.Interfaces;
+using FlexibleNotification.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace FlexibleNotification.API.Controllers
@@ -7,5 +8,18 @@ namespace FlexibleNotification.API.Controllers
     [ApiController]
     public class NotificationController : ControllerBase
     {
+        private readonly INotificationService _notificationService;
+
+        public NotificationController(INotificationService notificationService)
+        {
+            _notificationService = notificationService;
+        }
+
+        [HttpPost("send")]
+        public async Task<IActionResult> SendNotification([FromBody] NotificationMessage message)
+        {
+            var result = await _notificationService.SendNotificationAsync(message);
+            return result.IsSuccess ? Ok(result) : BadRequest(result);
+        }
     }
 }
