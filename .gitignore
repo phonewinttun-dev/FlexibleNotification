@@ -10,6 +10,8 @@
 *.userosscache
 *.sln.docstates
 
+Flexible_Notification_Service_Strategy_Pattern.md
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

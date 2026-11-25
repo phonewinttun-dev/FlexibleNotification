@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FlexibleNotification.Shared\FlexibleNotification.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

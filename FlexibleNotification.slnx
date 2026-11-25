@@ -1,4 +1,5 @@
 <Solution>
   <Project Path="FlexibleNotification.API/FlexibleNotification.API.csproj" />
   <Project Path="FlexibleNotification.Domain/FlexibleNotification.Domain.csproj" />
+  <Project Path="FlexibleNotification.Shared/FlexibleNotification.Shared.csproj" Id="d08f86a1-37f1-421f-bce9-8cb8bc63984c" />
 </Solution>
