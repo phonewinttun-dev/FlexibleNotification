@@ -1,9 +1,9 @@
-using FlexibleNotification.Domain;
 using FlexibleNotification.Domain.Interfaces;
 using FlexibleNotification.Domain.Providers.Email;
 using FlexibleNotification.Domain.Providers.Firebase;
 using FlexibleNotification.Domain.Providers.Sms;
 using FlexibleNotification.Domain.Services;
+using FlexibleNotification.Shared;
 using Scalar.AspNetCore;
 using System.Net;
 using System.Net.Mail;

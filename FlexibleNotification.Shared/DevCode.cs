@@ -1,7 +1,7 @@
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace FlexibleNotification.Domain
+namespace FlexibleNotification.Shared
 {
     public static class DevCode
     {
