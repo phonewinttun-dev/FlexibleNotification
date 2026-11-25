@@ -20,19 +20,23 @@ builder.Services.AddScoped<INotificationProvider, FirebaseNotificationProvider>(
 builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddScoped<INotificationProvider, EmailService>();
 
+var smtpHost = builder.Configuration["SMTP_HOST"]!;
+var smtpPort = builder.Configuration.GetValue<int>("SMTP_PORT", 587);
+var smtpUser = builder.Configuration["SMTP_USER"]!;
+var smtpPass = builder.Configuration["SMTP_PASS"]!;
+var fromAddress = new MailAddress(builder.Configuration["SMTP_FROM"]!);
+
 builder.Services
-            .AddFluentEmail("eventticketingsystem.opom@gmail.com")
-            .AddSmtpSender(new SmtpClient("smtp.gmail.com")
-            {
-                UseDefaultCredentials = false,
-                Credentials = new NetworkCredential(
-                        "eventticketingsystem.opom@gmail.com",
-                        "qpqo kczf gffk bycz"),
-                EnableSsl = true,
-                Port = 587,
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                Timeout = 10000
-            });
+    .AddFluentEmail(fromAddress.Address, fromAddress.DisplayName)
+    .AddSmtpSender(new SmtpClient(smtpHost)
+    {
+        UseDefaultCredentials = false,
+        Credentials = new NetworkCredential(smtpUser, smtpPass),
+        EnableSsl = true,
+        Port = smtpPort,
+        DeliveryMethod = SmtpDeliveryMethod.Network,
+        Timeout = 10000
+    });
 
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
