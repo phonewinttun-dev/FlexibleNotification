@@ -26,10 +26,10 @@ flowchart LR
 
 ```text
 FlexibleNotification/
-├── FlexibleNotification.API/          # ASP.NET Core Web API
+├── FlexibleNotification.Api/          # ASP.NET Core Web API
 │   ├── Controllers/
 │   │   └── NotificationController.cs  # POST /api/notification/send
-│   ├── FlexibleNotification.API.http  # Sample HTTP requests
+│   ├── FlexibleNotification.Api.http  # Sample HTTP requests
 │   └── Program.cs                     # DI registration & JSON enum configuration
 ├── FlexibleNotification.Domain/       # Core models, strategies & services
 │   ├── Enums/
@@ -73,7 +73,7 @@ FlexibleNotification/
 
 3. **Run the API**
    ```bash
-   dotnet run --project FlexibleNotification.API
+   dotnet run --project FlexibleNotification.Api
    ```
    The API listens on `http://localhost:5282` (and `https://localhost:7054` for the `https` profile).
 
@@ -111,7 +111,7 @@ Content-Type: application/json
 }
 ```
 
- Ready-to-run requests for all channels are available in `FlexibleNotification.API/FlexibleNotification.API.http`.
+ Ready-to-run requests for all channels are available in `FlexibleNotification.Api/FlexibleNotification.Api.http`.
 
 ---
 

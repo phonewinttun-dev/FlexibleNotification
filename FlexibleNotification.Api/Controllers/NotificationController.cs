@@ -2,7 +2,7 @@
 using FlexibleNotification.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FlexibleNotification.API.Controllers
+namespace FlexibleNotification.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
